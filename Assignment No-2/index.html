@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                                     <!-- Question No-1 -->
+    <!--In CSS, the term "box model" is used when talking about design and layout.
+
+The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.Explanation of the different parts:
+
+Content - The content of the box, where text and images appear
+Padding - Clears an area around the content. The padding is transparent
+Border - A border that goes around the padding and content
+Margin - Clears an area outside the border. The margin is transparent
+The total width of an element should be calculated like this:
+
+Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+
+The total height of an element should be calculated like this:
+
+Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin  -->
+
+                                        <!-- Question No-2 -->
+<!-- CSS Selector
+CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.
+
+There are several different types of selectors in CSS.
+
+CSS Element Selector
+CSS Id Selector
+CSS Class Selector
+CSS Universal Selector
+CSS Group Selector
+
+1) CSS Element Selector
+The element selector selects the HTML element by name.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p{  
+    text-align: center;  
+    color: blue;  
+}   
+</style>  
+</head>  
+<body>  
+<p>This style will be applied on every paragraph.</p>  
+<p id="para1">Me too!</p>  
+<p>And me!</p>  
+</body>  
+</html>  
+
+2) CSS Id Selector
+The id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page so it is chosen to select a single, unique element.
+
+It is written with the hash character (#), followed by the id of the element.
+
+Let?s take an example with the id "para1".
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+#para1 {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<p id="para1">Hello Javatpoint.com</p>  
+<p>This paragraph will not be affected.</p>  
+</body>  
+</html>    
+
+3) CSS Class Selector
+The class selector selects HTML elements with a specific class attribute. It is used with a period character . (full stop symbol) followed by the class name.
+
+Note: A class name should not be started with a number.
+Let's take an example with a class "center".
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+.center {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<h1 class="center">This heading is blue and center-aligned.</h1>  
+<p class="center">This paragraph is blue and center-aligned.</p>   
+</body>  
+</html>  
+
+CSS Class Selector for specific element
+If you want to specify that only one specific HTML element should be affected then you should use the element name with class selector.
+
+Let's see an example.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+p.center {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<h1 class="center">This heading is not affected</h1>  
+<p class="center">This paragraph is blue and center-aligned.</p>   
+</body>  
+</html>   
+
+4) CSS Universal Selector
+The universal selector is used as a wildcard character. It selects all the elements on the pages.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+* {  
+   color: green;  
+   font-size: 20px;  
+}   
+</style>  
+</head>  
+<body>  
+<h2>This is heading</h2>  
+<p>This style will be applied on every paragraph.</p>  
+<p id="para1">Me too!</p>  
+<p>And me!</p>  
+</body>  
+</html>   
+
+5) CSS Group Selector
+The grouping selector is used to select all the elements with the same style definitions.
+
+Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.
+
+Let's see the CSS code without group selector.
+
+h1 {  
+    text-align: center;  
+    color: blue;  
+}  
+h2 {  
+    text-align: center;  
+    color: blue;  
+}  
+p {  
+    text-align: center;  
+    color: blue;  
+}  
+As you can see, you need to define CSS properties for all the elements. It can be grouped in following ways:
+
+h1,h2,p {  
+    text-align: center;  
+    color: blue;  
+}  
+Let's see the full example of CSS group selector.
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+h1, h2, p {  
+    text-align: center;  
+    color: blue;  
+}  
+</style>  
+</head>  
+<body>  
+<h1>Hello Javatpoint.com</h1>  
+<h2>Hello Javatpoint.com (In smaller font)</h2>  
+<p>This is a paragraph.</p>  
+</body>  
+</html>  
+
+Advantages of CSS Selectors
+
+CSS plays an important role, by using CSS you simply got to specify a repeated style for element once & use it multiple times as because CSS will automatically apply the required styles.
+The main advantage of CSS is that style is applied consistently across variety of sites. One instruction can control several areas which is advantageous.
+Web designers needs to use few lines of programming for every page improving site speed.
+Cascading sheet not only simplifies website development, but also simplifies the maintenance as a change of one line of code affects the whole web site and maintenance time.
+It is less complex therefore the effort are significantly reduced.-->
+
+<!-- Question No-3 -->
+<!--  VH stands for “viewport height”, which is the viewable screen's height. 100VH would represent 100% of the viewport's height, or the full height of the screen. And of course, VW stands for “viewport width”, which is the viewable screen's width. -->
+
+<!-- Question No-4 -->
+<!-- The inline, inline-block, and block layout values are all possible values for the CSS display properties. Many newbie frontend developers usually struggle with understanding the difference between the three, and it’s a common frontend developer interview question.
+
+display:inline
+When an element is styled with display:inline, it will not start on a new line, will only take up as much width as the content it contains, and will not cause a line break after it. 
+
+For example, consider the code below:
+
+
+As you can see, the inline element is not affected by the declared width or height.
+The HTML<span> element is inline by default as well as several other elements listed here. 
+
+display:inline-block
+The difference between an inline element and an inline-block element is that an inline-block element can take up specified width and height. But, it will also not start on a new line within its parent or cause a line break after it. 
+
+
+As you can see, the inline-block element does not start on a new line, but it takes up the specified width and height.
+
+display:block
+Any element styled with display: block is the polar opposite of display:inline. A block element starts on a new line and occupies the available width of its parent element or its specified width. 
+
+
+As you can see, the block element starts on a new line.
+
+The HTML [p], [div], as well as other elements listed here are block elements by default.  -->
+
+<!-- Question No-5 -->
+<!-- In the content box model, the content inside of element will have the same dimension as the element. In the border box model, the content's dimension has to subtract the border and padding from the element's dimension. -->
+
+<!-- Question No-6 -->
+<!-- z-index
+The z-index CSS property sets the z-order of a positioned element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.
+For a positioned box (that is, one with any position other than static), the z-index property specifies:
+
+The stack level of the box in the current stacking context.
+Whether the box establishes a local stacking context.
+
+/* Keyword value */
+z-index: auto;
+
+/* <integer> values */
+z-index: 0;
+z-index: 3;
+z-index: 289;
+z-index: -1; /* Negative values to lower the priority */
+
+/* Global values */
+z-index: inherit;
+z-index: initial;
+z-index: revert;
+z-index: revert-layer;
+z-index: unset;
+-->
+
+<!-- Question No-7 -->
+<!-- Grid:CSS Grid Layout, is a two-dimensional grid-based layout system with rows and columns, making it easier to design web pages without having to use floats and positioning. Like tables, grid layout allow us to align elements into columns and rows. 
+
+Flexbox: The CSS Flexbox offers a one-dimensional layout. It is helpful in allocating and aligning the space among items in a container (made of grids). It works with all kinds of display devices and screen sizes.
+
+Difference Between Grid and Flexbox:
+
+1. Dimensionality and Flexibility:
+
+Flexbox offers greater control over alignment and space distribution between items. Being one-dimensional, Flexbox only deals with either columns or rows.
+Grid has two-dimension layout capabilities which allow flexible widths as a unit of length. This compensates for the limitations in Flex.
+2. Alignment:
+
+Flex Direction allows developers to align elements vertically or horizontally, which is used when developers create and reverse rows or columns.
+CSS Grid deploys fractional measure units for grid fluidity and auto-keyword functionality to automatically adjust columns or rows.
+3. Item Management
+
+Flex Container is the parent element while Flex Item represents the children. The Flex Container can ensure balanced representation by adjusting item dimensions. This allows developers to design for fluctuating screen sizes.
+Grid supports both implicit and explicit content placement. Its inbuilt automation allows it to automatically extend line items and copy values into the new creation from the preceding item.-->
+
+<!-- Question No-8 -->
+<!--Relative Position: Setting the top, right, bottom, and left properties of an element with position: relative; property will cause it to adjust from its normal position. The other objects or elements will not fill the gap.
+
+Syntax:
+
+position: relative;
+Absolute Position: An element with position: absolute; will cause it to adjust its position with respect to its parent. If no parent is present, then it uses the document body as parent.
+
+position: absolute;
+Fixed Position: Position: fixed; property applied to an element will cause it to always stay in the same place even if the page is scrolled. To position the element we use top, right, bottom, left properties.
+Syntax:
+
+position: fixed;
+The below example illustrates the differences between Relative Position and Absolute Position.
+
+Relative Position:
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		div.relative {
+			position: relative;
+			left: 50px;
+			border: 3px solid #73AD21;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>position: relative;</h1>
+
+	<div class="relative">
+		This element has position:relative;
+	</div>
+</body>
+
+</html>
+
+Absolute Position:
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		div.relative {
+			position: relative;
+			width: 400px;
+			height: 200px;
+			border: 3px solid #73AD21;
+		}
+		
+		div.absolute {
+			position: absolute;
+			top: 80px;
+			right: 80px;
+			width: 200px;
+			height: 100px;
+			border: 3px solid #73AD21;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>position: absolute;</h1>
+
+	<div class="relative">
+		This element has position: relative;
+		<div class="absolute">
+			This element has position: absolute;
+		</div>
+	</div>
+</body>
+
+</html>
+
+Fixed Position:
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		div.fixed {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			width: 300px;
+			border: 3px solid #73AD21;
+		}
+
+		div.absolute {
+			position: absolute;
+			top: 150px;
+			right: 80;
+			width: 200px;
+			height: 100px;
+			border: 3px solid #73AD21;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>position: absolute;</h1>
+
+	<h2>position: fixed;</h2>
+	<div class="absolute">
+		This element has position: absolute;
+	</div>
+	
+</body>
+
+</html>
+
+As the name implies, this makes an element stick to a container. The sticky position toggles between the relative and fixed position in a scrolling container. An element of this position style starts with the relative position, retaining its flow in the document. Upon scrolling in the container, if the specified positioning distance (with top, for example) is met, the element becomes fixed until the scrolling container is out of view.
+
+Here's an example to explain this:
+
+<div class="container">
+  <div class="red-block"></div>
+  <div class="blue-block"></div>
+  <div class="green-block"></div>
+  <div class="other-block"></div>
+</div>
+.container {
+  width: 400px;
+  height: 200px;
+  border: 1px solid black;
+  overflow-y: auto;
+  margin: 20px;
+  padding: 20px;
+}
+
+.red-block,
+.blue-block,
+.green-block {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.red-block {
+  background-color: red;
+}
+
+.blue-block {
+  background-color: blue;
+  position: sticky;
+  top: 10px;
+}
+
+.green-block {
+  background-color: green;
+}
+
+.other-block {
+  height: 500px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: rgb(61, 61, 61);
+}-->
+</body>
+</html>
